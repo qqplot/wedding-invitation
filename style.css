@@ -7,7 +7,22 @@ section { padding: 50px 20px; }
 
 /* 메인 비주얼 */
 .main-visual { background-color: #fffaf0; padding-top: 40px;}
-.main-img { width: 90%; height: auto; border-radius: 2px; margin: 20px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+/* .main-img { width: 90%; height: auto; border-radius: 2px; margin: 20px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); } */
+
+/* 메인 비주얼 이미지 */
+.main-img { 
+    width: 90%; 
+    height: auto; 
+    border-radius: 2px; 
+    margin: 20px 0; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+    
+    /* [추가된 부분] 클릭, 드래그, 꾹 누르기 완벽 방지 */
+    pointer-events: none; 
+    -webkit-touch-callout: none; /* 아이폰 꾹 누르기 메뉴 방지 */
+    -webkit-user-select: none;   /* 이미지 선택 방지 */
+}
+
 .names { font-size: 1.4rem; font-weight: bold; margin: 20px 0; }
 
 /* 모시는 글 */
@@ -183,3 +198,5 @@ a.phone-link {
     transition: 0.2s;
 }
 a.phone-link:hover { background: #eee; }
+
+
