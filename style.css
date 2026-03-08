@@ -209,4 +209,5 @@ a.phone-link:hover { background: #eee; }
     -webkit-user-select: none;   /* 이미지 선택 방지 */
     user-select: none;
     -webkit-user-drag: none;     /* 마우스 드래그 방지 */
+    pointer-events: none;
 }
