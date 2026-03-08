@@ -52,6 +52,49 @@
         <button id="load-more-btn" class="load-more-btn" style="display: none;" onclick="showAllImages()">사진 더 보기 ∨</button>
     </section>
 
+
+    <section class="map-section">
+        <span class="title">LOCATION</span>
+        <div class="location-info">
+            <strong>노블발렌티 삼성</strong><br>
+            <small style="color:#888;">서울특별시 강남구 봉은사로 637</small>
+        </div>
+
+        <div class="map-container">
+            <div id="daumRoughmapContainer1772970566486" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+            <script charset="UTF-8">
+                // 1. 현재 화면의 너비를 계산합니다.
+                let screenWidth = window.innerWidth;
+                let finalMapWidth = 0;
+
+                // 2. 최대 너비(480px)를 넘지 않도록 설정하고, 양옆 여백(40px)을 빼줍니다.
+                if (screenWidth > 480) {
+                    finalMapWidth = 440; // PC 등 큰 화면일 때
+                } else {
+                    finalMapWidth = screenWidth - 40; // 모바일 화면일 때 동적 계산
+                }
+
+                // 3. 계산된 너비를 카카오맵에 전달합니다.
+                new daum.roughmap.Lander({
+                    "timestamp" : "1772970566486",
+                    "key" : "iyx4gidg6je",
+                    "mapWidth" : finalMapWidth, // 동적으로 계산된 너비 적용!
+                    "mapHeight" : "300"
+                }).render();
+            </script>
+        </div>
+        
+        <div class="btn-group">
+            <a href="https://kko.to/rieXn-Fjt1" target="_blank" class="btn">카카오맵</a>
+            <a href="https://naver.me/5uIYZdsZ" target="_blank" class="btn">네이버 지도</a>
+            <a href="https://tmap.life/89bab59a" target="_blank" class="btn">T맵</a>
+        </div>
+    </section>
+
+
     <section class="contact-section">
         <span class="title">CONTACT</span>
         
@@ -92,8 +135,6 @@
         </div>
     </section>
 
-
-    
 
     <section class="account-section">
         <span class="title">마음 전하실 곳</span>
@@ -139,65 +180,25 @@
             <div class="account-row">
                 <div class="account-info">
                     <span class="acc-name">신부 양수진</span>
-                    <p id="acc-bride">하나은행 123-456789-12345</p>
+                    <p id="acc-bride">카카오뱅크 3333-08-2613594</p>
                 </div>
                 <button class="copy-btn-small" onclick="copyAccount('acc-bride')">복사</button>
             </div>
             <div class="account-row">
                 <div class="account-info">
                     <span class="acc-name">아버지 양채모</span>
-                    <p id="acc-bride-father">농협 352-1234-5678-90</p>
+                    <p id="acc-bride-father">국민 929601-00-004157</p>
+
                 </div>
                 <button class="copy-btn-small" onclick="copyAccount('acc-bride-father')">복사</button>
             </div>
             <div class="account-row">
                 <div class="account-info">
                     <span class="acc-name">어머니 정길주</span>
-                    <p id="acc-bride-mother">기업은행 010-1234-5678</p>
+                    <p id="acc-bride-mother">농협 453067-52-044941</p>
                 </div>
                 <button class="copy-btn-small" onclick="copyAccount('acc-bride-mother')">복사</button>
             </div>
-        </div>
-    </section>
-
-    <section class="map-section">
-        <span class="title">LOCATION</span>
-        <div class="location-info">
-            <strong>노블발렌티 삼성</strong><br>
-            <small style="color:#888;">서울특별시 강남구 봉은사로 637</small>
-        </div>
-
-        <div class="map-container">
-            <div id="daumRoughmapContainer1772970566486" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-
-            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-            <script charset="UTF-8">
-                // 1. 현재 화면의 너비를 계산합니다.
-                let screenWidth = window.innerWidth;
-                let finalMapWidth = 0;
-
-                // 2. 최대 너비(480px)를 넘지 않도록 설정하고, 양옆 여백(40px)을 빼줍니다.
-                if (screenWidth > 480) {
-                    finalMapWidth = 440; // PC 등 큰 화면일 때
-                } else {
-                    finalMapWidth = screenWidth - 40; // 모바일 화면일 때 동적 계산
-                }
-
-                // 3. 계산된 너비를 카카오맵에 전달합니다.
-                new daum.roughmap.Lander({
-                    "timestamp" : "1772970566486",
-                    "key" : "iyx4gidg6je",
-                    "mapWidth" : finalMapWidth, // 동적으로 계산된 너비 적용!
-                    "mapHeight" : "300"
-                }).render();
-            </script>
-        </div>
-        
-        <div class="btn-group">
-            <a href="https://kko.to/rieXn-Fjt1" target="_blank" class="btn">카카오맵</a>
-            <a href="https://naver.me/5uIYZdsZ" target="_blank" class="btn">네이버 지도</a>
-            <a href="https://tmap.life/89bab59a" target="_blank" class="btn">T맵</a>
         </div>
     </section>
 
