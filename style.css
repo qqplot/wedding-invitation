@@ -153,3 +153,33 @@ section { padding: 50px 20px; }
 .root_daum_roughmap {
     width: 100% !important; /* 지도가 무조건 100%에 맞춰지도록 강제 */
 }
+
+
+/* =========================================
+   연락처 섹션 (기존 코드에서 수정) 
+   ========================================= */
+.contact-section { background-color: #fdfdfd; }
+.contact-wrap { display: flex; flex-direction: column; gap: 20px; padding: 0 10px; }
+.contact-box { background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+.contact-title { font-weight: bold; font-size: 1rem; color: #8a7b6a; margin-bottom: 15px; text-align: left; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+.contact-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f9f9f9; }
+.contact-row:last-child { border-bottom: none; }
+.contact-row span { font-size: 0.95rem; color: #333; text-align: left; }
+.contact-row span strong { font-size: 1.05rem; display: inline-block; margin-left: 8px; }
+
+/* 새롭게 추가된 전화번호 링크 디자인 */
+.phone-link {
+    text-decoration: none !important;
+    color: #555;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px; /* 아이콘과 숫자 사이 간격 */
+    padding: 6px 12px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 20px; /* 둥근 캡슐 모양 */
+    letter-spacing: 0.5px;
+    transition: 0.2s;
+}
+.phone-link:hover { background: #eee; }
