@@ -38,3 +38,45 @@ section { padding: 50px 20px; }
 .btn-group { display: flex; justify-content: center; gap: 10px; margin-top: 20px; }
 .btn { padding: 12px 20px; background: #fff; border: 1px solid #8a7b6a; color: #8a7b6a; text-decoration: none; border-radius: 5px; font-size: 0.85rem; transition: 0.3s; }
 .btn:hover { background: #8a7b6a; color: #fff; }
+
+/* 라이트박스 (이미지 확대 팝업) */
+.lightbox {
+    display: none; /* 평소에는 숨겨둠 */
+    position: fixed;
+    z-index: 999; /* 화면 맨 앞으로 가져오기 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9); /* 반투명 검은 배경 */
+}
+.lightbox img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 80vh;
+    margin-top: 10vh;
+    object-fit: contain; /* 원본 비율 유지하면서 꽉 차게 */
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }
