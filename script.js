@@ -132,3 +132,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
+
+// 7. 이미지 마우스 우클릭 방지
+document.addEventListener('contextmenu', function(e) {
+    // 클릭한 요소가 이미지(IMG)일 경우 우클릭 메뉴를 띄우지 않음
+    if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+    }
+});

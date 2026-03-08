@@ -200,3 +200,13 @@ a.phone-link {
 a.phone-link:hover { background: #eee; }
 
 
+
+/* =========================================
+   이미지 다운로드 방지 (꾹 누르기, 드래그 차단)
+   ========================================= */
+.gallery-item img, #lightbox-img {
+    -webkit-touch-callout: none; /* 아이폰 꾹 누르기 메뉴 방지 */
+    -webkit-user-select: none;   /* 이미지 선택 방지 */
+    user-select: none;
+    -webkit-user-drag: none;     /* 마우스 드래그 방지 */
+}
