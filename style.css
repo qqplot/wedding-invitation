@@ -140,3 +140,16 @@ section { padding: 50px 20px; }
 }
 .prev-btn { left: 10px; }
 .next-btn { right: 10px; }
+
+
+/* 삽입된 카카오맵 스타일 */
+.map-container {
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 5px; /* 지도 모서리를 살짝 둥글게 */
+    border: 1px solid #eee;
+}
+.root_daum_roughmap {
+    width: 100% !important; /* 지도가 무조건 100%에 맞춰지도록 강제 */
+}

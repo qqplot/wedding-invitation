@@ -84,3 +84,43 @@ function toggleAccordion(id) {
         panel.style.display = "block";
     }
 }
+
+// 5. 모바일 스와이프(터치 드래그)로 사진 넘기기 기능
+let startX = 0;
+let endX = 0;
+const lightboxElement = document.getElementById("lightbox");
+
+// (1) 모바일 화면에 손가락이 닿았을 때 위치 기억
+lightboxElement.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+});
+
+// (2) 손가락을 뗐을 때 위치 기억하고 계산
+lightboxElement.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+});
+
+// (3) PC 마우스 드래그 지원 (선택사항이지만 테스트할 때 편합니다)
+lightboxElement.addEventListener('mousedown', (e) => {
+    startX = e.clientX;
+});
+
+lightboxElement.addEventListener('mouseup', (e) => {
+    endX = e.clientX;
+    handleSwipe();
+});
+
+// (4) 스와이프 방향을 계산해서 사진을 넘겨주는 함수
+function handleSwipe() {
+    const threshold = 50; // 손가락을 50픽셀 이상 움직여야 스와이프로 인정
+    const diffX = startX - endX;
+
+    if (diffX > threshold) {
+        // 왼쪽으로 밀었을 때 -> 다음 사진
+        changeImage(1);
+    } else if (diffX < -threshold) {
+        // 오른쪽으로 밀었을 때 -> 이전 사진
+        changeImage(-1);
+    }
+}
