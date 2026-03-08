@@ -49,17 +49,68 @@
             </div>
     </section>
 
-    <section class="account-section">
+<section class="account-section">
         <span class="title">마음 전하실 곳</span>
-        <div class="account-box">
-            <div class="account-title">신랑측 계좌번호</div>
-            <p id="groom-account">국민은행 123456-00-123456 (채규병)</p>
-            <button class="copy-btn" onclick="copyAccount('groom-account')">계좌번호 복사</button>
+        <div class="account-intro">
+            멀리서도 축하의 마음을<br>
+            전하고 싶으신 분들을 위해<br>
+            계좌번호를 안내드립니다.<br><br>
+            소중한 축하를 보내주셔서 감사드리며,<br>
+            따뜻한 마음에 깊이 감사드립니다.
         </div>
-        <div class="account-box">
-            <div class="account-title">신부측 계좌번호</div>
-            <p id="bride-account">신한은행 110-123-456789 (양수진)</p>
-            <button class="copy-btn" onclick="copyAccount('bride-account')">계좌번호 복사</button>
+
+        <button class="accordion" onclick="toggleAccordion('groom-accounts')">
+            신랑측 계좌번호 보기 <span class="arrow">▼</span>
+        </button>
+        <div id="groom-accounts" class="panel">
+            <div class="account-row">
+                <div class="account-info">
+                    <span class="acc-name">신랑 채규병</span>
+                    <p id="acc-groom">국민은행 123456-00-123456</p>
+                </div>
+                <button class="copy-btn-small" onclick="copyAccount('acc-groom')">복사</button>
+            </div>
+            <div class="account-row">
+                <div class="account-info">
+                    <span class="acc-name">아버지 채수관</span>
+                    <p id="acc-groom-father">신한은행 110-123-456789</p>
+                </div>
+                <button class="copy-btn-small" onclick="copyAccount('acc-groom-father')">복사</button>
+            </div>
+            <div class="account-row">
+                <div class="account-info">
+                    <span class="acc-name">어머니 안해연</span>
+                    <p id="acc-groom-mother">우리은행 1002-123-456789</p>
+                </div>
+                <button class="copy-btn-small" onclick="copyAccount('acc-groom-mother')">복사</button>
+            </div>
+        </div>
+
+        <button class="accordion" onclick="toggleAccordion('bride-accounts')">
+            신부측 계좌번호 보기 <span class="arrow">▼</span>
+        </button>
+        <div id="bride-accounts" class="panel">
+            <div class="account-row">
+                <div class="account-info">
+                    <span class="acc-name">신부 양수진</span>
+                    <p id="acc-bride">하나은행 123-456789-12345</p>
+                </div>
+                <button class="copy-btn-small" onclick="copyAccount('acc-bride')">복사</button>
+            </div>
+            <div class="account-row">
+                <div class="account-info">
+                    <span class="acc-name">아버지 양채모</span>
+                    <p id="acc-bride-father">농협 352-1234-5678-90</p>
+                </div>
+                <button class="copy-btn-small" onclick="copyAccount('acc-bride-father')">복사</button>
+            </div>
+            <div class="account-row">
+                <div class="account-info">
+                    <span class="acc-name">어머니 정길주</span>
+                    <p id="acc-bride-mother">기업은행 010-1234-5678</p>
+                </div>
+                <button class="copy-btn-small" onclick="copyAccount('acc-bride-mother')">복사</button>
+            </div>
         </div>
     </section>
 

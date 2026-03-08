@@ -72,3 +72,15 @@ function updateLightboxImage() {
     const img = document.getElementById("lightbox-img");
     img.src = folderPath + currentImageIndex + extension;
 }
+
+// 4. 아코디언(접기/펴기) 토글 기능
+function toggleAccordion(id) {
+    const panel = document.getElementById(id);
+    
+    // 열려있으면 닫고, 닫혀있으면 엽니다.
+    if (panel.style.display === "block") {
+        panel.style.display = "none";
+    } else {
+        panel.style.display = "block";
+    }
+}

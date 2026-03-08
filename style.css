@@ -26,11 +26,71 @@ section { padding: 50px 20px; }
 .gallery-item img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
 
 /* 마음 전하실 곳 (계좌) */
+/* 마음 전하실 곳 (계좌) */
 .account-section { background-color: #fffaf0; }
-.account-box { background: #fff; border: 1px solid #eee; padding: 20px; margin-bottom: 15px; border-radius: 8px; text-align: left; }
-.account-title { font-weight: bold; font-size: 0.95rem; margin-bottom: 10px; color: #555; }
-.account-box p { margin: 0 0 15px 0; font-size: 0.95rem; letter-spacing: 0.5px; }
-.copy-btn { width: 100%; padding: 10px; background: #8a7b6a; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-family: 'Nanum Myeongjo', serif; }
+.account-intro { font-size: 0.95rem; line-height: 1.8; margin-bottom: 30px; color: #555; }
+
+/* 아코디언(접기/펴기) 버튼 */
+.accordion {
+    background-color: #fff;
+    color: #555;
+    cursor: pointer;
+    padding: 15px 20px;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    text-align: left;
+    outline: none;
+    font-size: 1rem;
+    font-family: 'Nanum Myeongjo', serif;
+    transition: 0.3s;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between; /* 글자는 왼쪽, 화살표는 오른쪽 */
+    align-items: center;
+}
+.accordion:hover { background-color: #f9f9f9; }
+.accordion .arrow { font-size: 0.8rem; color: #999; }
+
+/* 아코디언 내용 (처음엔 숨김) */
+.panel {
+    padding: 0 15px;
+    background-color: white;
+    display: none; /* 핵심: 기본적으로 안 보이게 함 */
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* 계좌 정보 1줄 레이아웃 */
+.account-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.account-row:last-child { border-bottom: none; } /* 마지막 줄은 밑줄 제거 */
+.account-info { text-align: left; }
+.acc-name { font-weight: bold; font-size: 0.95rem; color: #333; display: block; }
+.account-info p { margin: 5px 0 0 0; font-size: 0.85rem; color: #777; letter-spacing: 0.5px; }
+
+/* 작은 복사 버튼 */
+.copy-btn-small {
+    padding: 6px 12px;
+    background: #fdfdfd;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-family: 'Nanum Myeongjo', serif;
+}
+.copy-btn-small:hover { background: #eee; }
+
 
 /* 오시는 길 */
 .map-section { background-color: #fdfdfd; }
