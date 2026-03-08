@@ -11,7 +11,7 @@ section { padding: 50px 20px; }
 
 /* 메인 비주얼 이미지 */
 .main-img { 
-    width: 90%; 
+    width: 50%; 
     height: auto; 
     border-radius: 2px; 
     margin: 20px 0; 
