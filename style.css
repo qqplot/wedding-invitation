@@ -9,30 +9,37 @@ section { padding: 50px 20px; }
 /* 메인 비주얼 (화면 꽉 차게 수정) */
 .main-visual { 
     background-color: #fffaf0; 
-    min-height: 100vh; /* 기본 전체 화면 높이 */
-    min-height: 100dvh; /* 모바일 주소창을 고려한 완벽한 꽉 참 (최신 브라우저용) */
+    height: 100vh;      /* min-height 대신 height로 완전 고정 */
+    height: 100dvh;     /* 모바일 주소창 고려 */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 사진과 글씨를 위아래 정중앙에 배치 */
-    align-items: center; /* 좌우 정중앙 배치 */
+    justify-content: center; 
+    align-items: center; 
     box-sizing: border-box;
-    padding: 20px;
+    padding: 10px 20px; /* 패딩을 살짝 줄여서 공간 확보 */
+    overflow: hidden;   /* ★ 핵심: 화면 밖으로 튀어나가는 요소를 잘라냄 */
 }
 /* .main-img { width: 90%; height: auto; border-radius: 2px; margin: 20px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); } */
-
-/* 메인 비주얼 이미지 */
 .main-img { 
-    width: 50%; 
-    height: auto; 
+    width: 90%; 
+    max-height: 55vh;   /* ★ 핵심: 이미지가 폰 화면 높이의 55%를 넘지 않게 제한 */
+    object-fit: cover;  /* 비율이 깨지지 않게 예쁘게 맞춤 */
     border-radius: 2px; 
-    margin: 20px 0; 
+    margin: 15px 0;     /* 위아래 여백을 살짝 줄임 */
     box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
     
-    /* [추가된 부분] 클릭, 드래그, 꾹 누르기 완벽 방지 */
+    /* 기존 다운로드 방지 코드 유지 */
     pointer-events: none; 
-    -webkit-touch-callout: none; /* 아이폰 꾹 누르기 메뉴 방지 */
-    -webkit-user-select: none;   /* 이미지 선택 방지 */
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;   
 }
+
+/* 글자 여백 살짝 다듬기 (한 화면에 예쁘게 모이도록) */
+.main-visual .title { margin-bottom: 15px; }
+.main-visual .names { margin: 10px 0; }
+.main-visual p { margin: 5px 0; line-height: 1.5; }
+/* 메인 비주얼 이미지 */
+
 
 .names { font-size: 1.4rem; font-weight: bold; margin: 20px 0; }
 
