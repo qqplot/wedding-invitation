@@ -287,3 +287,21 @@ a.phone-link:hover { background: #eee; }
 .bus-badge.blue { background-color: #3b5998; } /* 간선버스 파란색 */
 .bus-badge.green { background-color: #00a259; } /* 지선버스 초록색 */
 .bus-badge.red { background-color: #e63946; } /* 직행버스 빨간색 */
+
+/* =========================================
+   푸터 (저작권 및 개발자 서명)
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fdfdfd;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 20px;
+}
+footer p {
+    margin: 0;
+    font-size: 0.75rem; /* 작고 앙증맞은 글씨 크기 */
+    color: #bbb;        /* 은은한 회색 */
+    letter-spacing: 1px;
+    font-family: Arial, sans-serif; /* 영어에 어울리는 폰트 */
+}
