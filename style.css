@@ -21,19 +21,19 @@ section { padding: 50px 20px; }
 }
 /* .main-img { width: 90%; height: auto; border-radius: 2px; margin: 20px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); } */
 .main-img { 
-    width: 90%; 
-    max-height: 55vh;   /* ★ 핵심: 이미지가 폰 화면 높이의 55%를 넘지 않게 제한 */
-    object-fit: cover;  /* 비율이 깨지지 않게 예쁘게 맞춤 */
+    max-width: 85%;     /* 가로로 너무 꽉 차지 않게 85%로 제한 */
+    max-height: 50vh;   /* 세로 길이도 폰 화면의 절반(50%)을 넘지 않게 제한 */
+    width: auto;        /* 억지로 늘리지 않고 원본 가로 비율 유지 */
+    height: auto;       /* 억지로 늘리지 않고 원본 세로 비율 유지 */
     border-radius: 2px; 
-    margin: 15px 0;     /* 위아래 여백을 살짝 줄임 */
+    margin: 15px 0;     
     box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
     
-    /* 기존 다운로드 방지 코드 유지 */
+    /* 다운로드 및 꾹 누르기 방지 코드 유지 */
     pointer-events: none; 
     -webkit-touch-callout: none; 
     -webkit-user-select: none;   
 }
-
 /* 글자 여백 살짝 다듬기 (한 화면에 예쁘게 모이도록) */
 .main-visual .title { margin-bottom: 15px; }
 .main-visual .names { margin: 10px 0; }
