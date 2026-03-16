@@ -52,8 +52,72 @@
         <button id="load-more-btn" class="load-more-btn" style="display: none;" onclick="showAllImages()">사진 더 보기 ∨</button>
     </section>
 
-
     <section class="map-section">
+        <span class="title">LOCATION</span>
+        <div class="location-info">
+            <strong>노블발렌티 삼성</strong><br>
+            <small style="color:#888;">서울 강남구 봉은사로 637 (삼성동 109-6)</small>
+        </div>
+
+        <img src="images/map.jpg" alt="오시는 길 약도" class="graphic-map" onerror="this.src='https://via.placeholder.com/400x300?text=map.jpg+업로드+필요'">
+
+        <div class="map-container">
+            <div id="daumRoughmapContainer1772970566486" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+            <script charset="UTF-8">
+                let screenWidth = window.innerWidth;
+                let finalMapWidth = screenWidth > 480 ? 440 : screenWidth - 40;
+                new daum.roughmap.Lander({
+                    "timestamp" : "1772970566486",
+                    "key" : "iyx4gidg6je",
+                    "mapWidth" : finalMapWidth, 
+                    "mapHeight" : "300"
+                }).render();
+            </script>
+        </div>
+        
+        <div class="btn-group">
+            <a href="https://kko.to/rieXn-Fjt1" target="_blank" class="btn">카카오맵</a>
+            <a href="https://naver.me/5uIYZdsZ" target="_blank" class="btn">네이버 지도</a>
+            <a href="https://tmap.life/89bab59a" target="_blank" class="btn">T맵</a>
+        </div>
+
+        <div class="traffic-info">
+            <div class="traffic-item">
+                <div class="traffic-title">🚇 지하철 이용 시</div>
+                <div class="traffic-desc">
+                    <strong><span style="color:#BDB092;">9호선 봉은사역</span> 4번 출구</strong> 도보 약 4분<br>
+                    <small>(셔틀버스: 5번 출구 우측 50~60m 이동 후 탑승 / 5분 간격)</small><br><br>
+                    <strong><span style="color:#00A259;">2호선 삼성역</span> 7번 출구</strong> 도보 15분<br>
+                    <small>(강남 01, 3417번 버스로 환승 → 노블발렌티 하차)</small>
+                </div>
+            </div>
+
+            <div class="traffic-item">
+                <div class="traffic-title">🚌 버스 이용 시</div>
+                <div class="traffic-desc">
+                    <strong>봉은사역 3번출구, 삼성1파출소</strong> <small>(23192)</small><br>
+                    <span class="bus-badge blue">간선</span> 143, 146, 301, 343, 345, 401<br>
+                    <span class="bus-badge green">지선</span> 2413, 2415, 3217, 3414, 4318<br>
+                    <span class="bus-badge red">직행</span> 9407, 9507, 9607
+                </div>
+            </div>
+
+            <div class="traffic-item">
+                <div class="traffic-title">🚗 자가용 이용 시</div>
+                <div class="traffic-desc">
+                    <strong>경부고속도로</strong><br>
+                    반포IC 종합운동장 방향 직진 > 교보생명 > 차병원 > 봉은사 > 아셈타워 직진 > 노블발렌티<br><br>
+                    <strong>서울 서부, 강북지역</strong><br>
+                    영동대교 남단 교차로 무역센터 방향 > 아셈타워 앞 봉은사 사거리 좌회전 > 노블발렌티<br><br>
+                    <strong>서울 동남부 지역</strong><br>
+                    삼성역 무역센터 교차로 영동대교 방향 > 아셈타워 앞 봉은사 사거리 우회전 > 노블발렌티
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!-- <section class="map-section">
         <span class="title">LOCATION</span>
         <div class="location-info">
             <strong>노블발렌티 삼성</strong><br>
@@ -92,7 +156,7 @@
             <a href="https://naver.me/5uIYZdsZ" target="_blank" class="btn">네이버 지도</a>
             <a href="https://tmap.life/89bab59a" target="_blank" class="btn">T맵</a>
         </div>
-    </section>
+    </section> -->
 
 
     <section class="contact-section">

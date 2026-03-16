@@ -229,3 +229,61 @@ a.phone-link:hover { background: #eee; }
     -webkit-user-drag: none;     /* 마우스 드래그 방지 */
     pointer-events: none;
 }
+
+/* =========================================
+   오시는 길 (약도 및 상세 교통 안내)
+   ========================================= */
+/* 상단 약도 이미지 */
+.graphic-map { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+    margin-bottom: 20px; 
+    border: 1px solid #eee; 
+    pointer-events: none; /* 약도 이미지 꾹 누르기 방지 */
+}
+
+/* 교통 안내 텍스트 컨테이너 */
+.traffic-info { 
+    margin-top: 40px; 
+    text-align: left; /* 글씨 왼쪽 정렬로 읽기 편하게 */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+.traffic-item { margin-bottom: 25px; }
+.traffic-item:last-child { margin-bottom: 0; } /* 마지막 여백 제거 */
+
+/* 교통수단 타이틀 */
+.traffic-title { 
+    font-weight: bold; 
+    font-size: 1rem; 
+    color: #555; 
+    margin-bottom: 12px; 
+    border-bottom: 1px solid #f0f0f0; 
+    padding-bottom: 8px; 
+}
+.traffic-desc { 
+    font-size: 0.9rem; 
+    color: #666; 
+    line-height: 1.6; 
+    letter-spacing: -0.3px;
+}
+.traffic-desc strong { color: #333; }
+.traffic-desc small { color: #888; font-size: 0.8rem; }
+
+/* 버스 색상 뱃지 */
+.bus-badge { 
+    display: inline-block; 
+    padding: 2px 6px; 
+    border-radius: 3px; 
+    color: #fff; 
+    font-size: 0.75rem; 
+    margin-right: 5px; 
+    margin-top: 5px; 
+    vertical-align: middle;
+}
+.bus-badge.blue { background-color: #3b5998; } /* 간선버스 파란색 */
+.bus-badge.green { background-color: #00a259; } /* 지선버스 초록색 */
+.bus-badge.red { background-color: #e63946; } /* 직행버스 빨간색 */
