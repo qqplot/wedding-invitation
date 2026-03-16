@@ -1,4 +1,4 @@
-body { margin: 0; padding: 0; font-family: 'Nanum Myeongjo', serif; color: #333; line-height: 3.2; background-color: #f9f9f9; text-align: center; }
+body { margin: 0; padding: 0; font-family: 'Nanum Myeongjo', serif; color: #333; line-height: 1.8; background-color: #f9f9f9; text-align: center; }
 .container { max-width: 480px; margin: 0 auto; background: #fff; padding-bottom: 50px; position: relative; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
 
 /* 섹션 공통 */
@@ -6,7 +6,18 @@ section { padding: 50px 20px; }
 .title { font-size: 1.1rem; letter-spacing: 3px; color: #8a7b6a; margin-bottom: 30px; display: block; font-weight: bold;}
 
 /* 메인 비주얼 */
-.main-visual { background-color: #fffaf0; padding-top: 40px;}
+/* 메인 비주얼 (화면 꽉 차게 수정) */
+.main-visual { 
+    background-color: #fffaf0; 
+    min-height: 100vh; /* 기본 전체 화면 높이 */
+    min-height: 100dvh; /* 모바일 주소창을 고려한 완벽한 꽉 참 (최신 브라우저용) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 사진과 글씨를 위아래 정중앙에 배치 */
+    align-items: center; /* 좌우 정중앙 배치 */
+    box-sizing: border-box;
+    padding: 20px;
+}
 /* .main-img { width: 90%; height: auto; border-radius: 2px; margin: 20px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); } */
 
 /* 메인 비주얼 이미지 */
